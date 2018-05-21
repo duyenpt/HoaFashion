@@ -1,0 +1,46 @@
+/*--Add font UTM avo--*/
+
+@font-face {
+  font-family: 'UTMAvo';
+  src: url('../fonts/UTMAvo.eot');
+  src: url('../fonts/UTMAvo.eot') format('embedded-opentype'),
+  url('../fonts/UTMAvo.woff') format('woff'),
+  url('../fonts/UTMAvo.svg#UTMAvoRegular') format('svg'),
+  url('../fonts/UTMAvo.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'UTMAvo';
+  src: url('../fonts/utmavobold.eot');
+  src: url('../fonts/utmavobold.eot') format('embedded-opentype'),
+  url('../fonts/utmavobold.woff') format('woff'),
+  url('../fonts/utmavobold.svg#UTMAvoBold') format('svg'),
+  url('../fonts/utmavobold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UTMAvo';
+  src: url('../fonts/utmavobold_italic.eot');
+  src: url('../fonts/utmavobold_italic.eot') format('embedded-opentype'),
+  url('../fonts/utmavobold_italic.woff') format('woff'),
+  url('../fonts/utmavobold_italic.svg#UTMAvoBoldItalic') format('svg'),
+  url('../fonts/utmavobold_italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'UTMAvo';
+  src: url('../fonts/utmavoitalic.eot');
+  src: url('../fonts/utmavoitalic.eot') format('embedded-opentype'),
+  url('../fonts/utmavoitalic.woff') format('woff'),
+  url('../fonts/utmavoitalic.svg#UTMAvoItalic') format('svg'),
+  url('../fonts/utmavoitalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+/*-- e: Add font UTM avo--*/

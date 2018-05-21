@@ -1,0 +1,180 @@
+// breakpoint
+  @mixin breakpoint($bp) {
+    @if $bp == xl {
+      @media only screen and (min-width: 1200px) { @content ; }
+    } @else if $bp == lg {
+      @media only screen and (min-width:992px) { @content ; }
+    } @else if $bp == md{
+      @media only screen and (min-width: 768px) { @content ; }
+    } @else if $bp == sm {
+      @media only screen and (min-width: 576px){ @content ; }
+    } 
+  }
+
+
+  //fluid-type
+  @function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+  }
+  
+  @mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+    @each $property in $properties {
+        #{$property}: $min-value;
+    }
+  
+    @media screen and (min-width: $min-vw) {
+        @each $property in $properties {
+        #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+        }
+    }
+  
+    @media screen and (min-width: $max-vw) {
+        @each $property in $properties {
+        #{$property}: $max-value;
+        }
+    }
+  }
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+  @mixin box-shadow($shadow) {
+      -webkit-box-shadow: $shadow;
+      -moz-box-shadow: $shadow;
+      -ms-box-shadow: $shadow;
+      box-shadow: $shadow;
+  }
+  @mixin square($distance) {
+    width: $distance;
+    height: $distance;
+  }
+  @mixin rotate($degs) {
+    -webkit-transform: rotate($degs);
+    -moz-transform: rotate($degs);
+    -ms-transform: rotate($degs);
+    -o-transform: rotate($degs);
+    transform: rotate($degs);
+  }
+  
+  @mixin user-select($select){
+    -webkit-touch-callout: $select; /* iOS Safari */
+    -webkit-user-select: $select;   /* Chrome/Safari/Opera */
+    -khtml-user-select: $select;    /* Konqueror */
+    -moz-user-select: $select;      /* Firefox */
+    -ms-user-select: $select;
+  }
+  @mixin gradient($topColor, $bottomColor){
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0, $topColor),
+      color-stop(1, $bottomColor)
+    );
+    background-image: -o-linear-gradient(bottom, $topColor 0%, $bottomColor 100%);
+    background-image: -moz-linear-gradient(bottom, $topColor 0%, $bottomColor 100%);
+    background-image: -webkit-linear-gradient(bottom, $topColor 0%, $bottomColor 100%);
+    background-image: -ms-linear-gradient(bottom, $topColor 0%, $bottomColor 100%);
+    background-image: linear-gradient(to bottom, $topColor 0%, $bottomColor 100%);
+  }
+
+  @mixin gradientButton($topColor, $centerColor, $bottomColor){
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0, $topColor),
+      color-stop(0.5, $centerColor),
+      color-stop(1, $bottomColor)
+    );
+    background-image: -o-linear-gradient(bottom, $topColor 0%, $centerColor 50%, $bottomColor 100%);
+    background-image: -moz-linear-gradient(bottom, $topColor 0%, $centerColor 50%, $bottomColor 100%);
+    background-image: -webkit-linear-gradient(bottom, $topColor 0%, $centerColor 50%, $bottomColor 100%);
+    background-image: -ms-linear-gradient(bottom, $topColor 0%, $centerColor 50%, $bottomColor 100%);
+    background-image: linear-gradient(to bottom, $topColor 0%, $centerColor 50%, $bottomColor 100%);
+  }
+  
+  @mixin transition($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    transition: $transition;
+  }
+  
+  @mixin opacity($value) {
+      $IEValue: $value*100;
+      /* IE 8 */
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+      /* IE 5-7 */
+      filter: alpha(opacity=$IEValue);
+      opacity: $value;
+  }
+  
+  @mixin font-face($font-name, $file-name, $weight: normal, $style: normal) { 
+    @font-face {
+      font-family: quote($font-name);
+      src: url($file-name + '.ttf')  format('truetype'),
+           url($file-name + '.svg##{$font-name}')  format('svg');
+      font-weight: $weight;
+      font-style: $style;
+    }
+   }
+
+@mixin flexWidth($value){
+  -ms-flex: 0 0 $value;
+  flex: 0 0 $value;
+  max-width: $value;
+}
+
+@mixin flexWrap(){
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@mixin dFlex(){
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin justifyContent($value){
+  -ms-flex-pack: $value;
+  justify-content: $value;
+}
+
+@mixin alignItems($value){
+  -ms-flex-align: $value;
+  align-items: $value;
+}
+
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+  transform: translate($x, $y);
+}
+
+@mixin placeholder($color){
+  &::-webkit-input-placeholder { // WebKit browsers
+    color: #{$color};
+  }
+  &:-moz-placeholder { // Mozilla Firefox 4 to 18
+    color: #{$color};
+    opacity:  1;
+  }
+  &::-moz-placeholder { // Mozilla Firefox 19+
+    color: #{$color};
+    opacity:  1;
+  }
+  &:-ms-input-placeholder { // Internet Explorer 10+
+    color: #{$color};
+  }
+}
+
+@mixin transform($value){
+  -webkit-transform:$value;
+  -moz-transform:$value;
+  -o-transform:$value;
+  transform:$value;
+}

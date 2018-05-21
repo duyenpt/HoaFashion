@@ -1,0 +1,8 @@
+.tmp/
+.idea/
+app/.idea/
+bower_components/
+node_modules/
+tmp/
+dist/
+package-lock.json

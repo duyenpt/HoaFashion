@@ -1,0 +1,47 @@
+@-webkit-keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    @include transform(translate3d(0, -100%, 0));
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    @include transform(translate3d(0, -100%, 0));
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    @include transform(translate3d(0, 100%, 0));
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    @include transform(translate3d(0, 100%, 0));
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
