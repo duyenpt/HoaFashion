@@ -1,7 +1,26 @@
 extends layouts/default
 
 block content
-	section.banner-home(style="height:1000px;")
+	section.banner-home(style="height:300px;")
+	section.new-products.index-section
+		.container-fluid
+			.slider-product
+				.item
+					.tile-prpoduct
+						.view-img.lazy
+							a(href="#")
+								img.lazyloaded(src="img/upload/products/2014_09_27_Lana_Look_30_05_360x.jpg" alt="Image" data-src="img/upload/products/2014_09_27_Lana_Look_30_04_360x.jpg")
+							.product-labels
+								label.on-sale Sale
+							form.variants.add
+								button.btn.btn--secondary.btn-addto-cart(type='button') Select Options
+							.button-set
+								a.quick-view(href='#', title='Quick View', tabindex='0')
+									i.fa.fa-search(aria-hidden='true')
+								.wishlist-btn
+									a.wishlist.added-wishlist(href='#', rel='camelia-reversible-jacket-black-red', title='Already in your wishlist, Go to wishlist', tabindex='0')
+										i.fa.fa-heart
+										span View Wishlist
 	section.store-info.index-section
 		.container-fluid
 			.row

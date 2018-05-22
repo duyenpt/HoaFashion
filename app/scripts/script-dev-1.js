@@ -143,7 +143,25 @@ var ResponsiveMenu =  {
 
       return slideshow;
     })();
-	
+
+    function hover_img(){
+        $('.lazy').each(function(){
+            var img_hover = $(this).find('img').attr('data-src');
+            var img_normal = $(this).find('img').attr('src');
+            console.log(img_hover);
+            $(this).hover(function(){
+                $(this).find('img').attr('src', img_hover);
+            }, function(){
+                $(this).find('img').attr('src', img_normal);
+            });
+
+        });
+    }
+
+  
+
+
+
 
 	// **********************************************************************//
 	// ! Window ready
@@ -185,6 +203,7 @@ var ResponsiveMenu =  {
             $(this).parent().next().slideToggle();
         });
 
+
         $('.navbar-toggler').click(function(e){
           e.stopPropagation();
           $('body').addClass('open-menu');
@@ -193,7 +212,20 @@ var ResponsiveMenu =  {
         $('.closemobileMenu').click(function(){
           $('body').removeClass('open-menu');
         });
-  });
+
+        hover_img();
+ 
+
+        //banner
+        $('.banner-home').slick({
+          dots: false,
+          arrows: false,
+          slideToShow:1,
+          autoplay:true,
+          autoplayspeed:3000,
+          fade: true
+        });
+     });
 	// **********************************************************************//
 	// ! Window load
 	// **********************************************************************//
@@ -207,4 +239,7 @@ var ResponsiveMenu =  {
 	$(window).on('resize', function () {
 	  
 	});
+
 })(jQuery);
+
+

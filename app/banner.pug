@@ -3,60 +3,35 @@ extends layouts/default
 block content
 	// start banner-home
 	section.banner-home.index-section
-		.inner(data-section-id="slideshow" data-section-type="slideshow-section")
-			.slideshow-wrapper
-				#Slideshow-slideshow.slideshow.slideshow--large(data-autoplay="true" data-speed="7000")
-					.slideshow__slide.slideshow__slide--slideshow-0
-						a.slideshow__link(href="#")
-							.slideshow__image.slideImg-slideshow-0
-								style.
-									@media only screen and (min-width:767px) {
-										.slideImg-slideshow-0 { background-image: url('//cdn.shopify.com/s/files/1/1964/8879/files/home-bnr-4_1900x.jpg?v=1496560534'); background-position: top; }
-									}
-									@media only screen and (max-width:767px) {
-										.slideImg-slideshow-0 { background-image: url('//cdn.shopify.com/s/files/1/1964/8879/files/home-bnr-4_800x.jpg?v=1496560534'); background-position: top; }
-									}
-							.slideshow__text-wrap.slideshow__overlay
-								.slideshow__text-content
-									.page-width
-										.wrap-caption
-											h2.h1.mega-title.slideshow__title.mega-title--large Fashion &amp; Show
-											span.mega-subtitle.slideshow__subtitle.mega-subtitle--large A World Fashion and Trendy Fashion Clother&#39;s
-											span.btn Shop now
-					.slideshow__slide.slideshow__slide--slideshow-1
-						a.slideshow__link(href="#")
-							.slideshow__image.slideImg-slideshow-1
-								style.
-									@media only screen and (min-width:767px) {
-										.slideImg-slideshow-1 { background-image: url('//cdn.shopify.com/s/files/1/1964/8879/files/slide-2_1900x.jpg?v=1494683254'); background-position: top; }
-									}
-									@media only screen and (max-width:767px) {
-										.slideImg-slideshow-1 { background-image: url('//cdn.shopify.com/s/files/1/1964/8879/files/slide-2_800x.jpg?v=1494683254'); background-position: top; }
-									}
-							.slideshow__text-wrap.slideshow__overlay
-								.slideshow__text-content
-									.page-width
-										.wrap-caption
-											h2.h1.mega-title.slideshow__title.mega-title--large Shop Our New Collection
-											span.mega-subtitle.slideshow__subtitle.mega-subtitle--large From Hight to low, classic or modern. We have you covered
-											span.btn Shop now
-					.slideshow__slide.slideshow__slide--slideshow-1493628638136
-						a.slideshow__link(href="#")
-							.slideshow__image.slideImg-slideshow-1493628638136
-								style.
-									@media only screen and (min-width:767px) {
-										.slideImg-slideshow-1493628638136 { background-image: url('//cdn.shopify.com/s/files/1/1964/8879/files/slide-3_1900x.jpg?v=1494683273'); background-position: top; }
-									}
-									@media only screen and (max-width:767px) {
-										.slideImg-slideshow-1493628638136 { background-image: url('//cdn.shopify.com/s/files/1/1964/8879/files/slide-3_800x.jpg?v=1494683273'); background-position: top; }
-									}
-							.slideshow__text-wrap.slideshow__overlay
-								.slideshow__text-content
-									.page-width
-										.wrap-caption
-											h2.h1.mega-title.slideshow__title.mega-title--large Lingerie collections
-											span.mega-subtitle.slideshow__subtitle.mega-subtitle--large Save up to 50% off this weekend only
-											span.btn Shop now
+		.banner-item.item
+			a(href="#")
+				img.pc(src="http://cdn.shopify.com/s/files/1/1964/8879/files/home-bnr-4_1900x.jpg", alt="Image")
+				img.sp(src="http://cdn.shopify.com/s/files/1/1964/8879/files/home-bnr-4_800x.jpg", alt="Image")
+				.slideshow-overlay
+					.slideshow-content
+						.slideshow-caption
+							h2.slideshow-title Fashion &amp; Show
+							span.slideshow-subtitle A World Fashion and Trendy Fashion Clother&#39;s
+							span.btn Shop now
 
-
+		.banner-item.item
+			a(href="#")
+				img.pc(src="http://cdn.shopify.com/s/files/1/1964/8879/files/slide-2_1900x.jpg", alt="Image")
+				img.sp(src="http://cdn.shopify.com/s/files/1/1964/8879/files/slide-2_800x.jpg", alt="Image")
+				.slideshow-overlay
+					.slideshow-content
+						.slideshow-caption
+							h2.slideshow-title Shop Our New Collection
+							span.slideshow-subtitle From Hight to low, classic or modern. We have you covered
+							span.btn Shop now
+		.banner-item.item
+			a(href="#")
+				img.pc(src="http://cdn.shopify.com/s/files/1/1964/8879/files/slide-3_1900x.jpg", alt="Image")
+				img.sp(src="http://cdn.shopify.com/s/files/1/1964/8879/files/slide-3_800x.jpg", alt="Image")
+				.slideshow-overlay
+					.slideshow-content
+						.slideshow-caption
+							h2.slideshow-title Lingerie collections
+							span.slideshow-subtitle Save up to 50% off this weekend only
+							span.btn Shop now
 	// e: banner-home
