@@ -69,81 +69,7 @@ var ResponsiveMenu =  {
     },function(event) {
       $('.mega-wrap').fadeOut('300');
     });
-  }
-
-  //banner
-  var theme = theme || {};
-  theme.Slideshow = (function() {
-      this.$slideshow = null;
-      var classes = {
-        wrapper: 'slideshow-wrapper',
-        slideshow: 'slideshow',
-        currentSlide: 'slick-current'
-      };
-
-      function slideshow(el) {
-        this.$slideshow = $(el);
-        this.$wrapper = this.$slideshow.closest('.' + classes.wrapper);
-        this.$pause = this.$wrapper.find('.' + classes.pauseButton);
-
-        this.settings = {
-          accessibility: true,
-          arrows: true,
-          dots: false,
-          fade: true,
-          rtl:theme.rtl,
-          draggable: true,
-          touchThreshold: 20,
-          autoplay: this.$slideshow.data('autoplay'),
-          autoplaySpeed: this.$slideshow.data('speed')
-        };
-
-        this.$slideshow.on('beforeChange', beforeChange.bind(this));
-        this.$slideshow.on('init', slideshowA11y.bind(this));
-        this.$slideshow.slick(this.settings);
-      }
-
-      function slideshowA11y(event, obj) {
-        var $slider = obj.$slider;
-        var $list = obj.$list;
-        var $wrapper = this.$wrapper;
-        var autoplay = this.settings.autoplay;
-
-        // Remove default Slick aria-live attr until slider is focused
-        $list.removeAttr('aria-live');
-
-        // Add arrow key support when focused
-        if (obj.$dots) {
-          obj.$dots.on('keydown', function(evt) {
-            if (evt.which === 37) {
-              $slider.slick('slickPrev');
-            }
-
-            if (evt.which === 39) {
-              $slider.slick('slickNext');
-            }
-
-            // Update focus on newly selected tab
-            if ((evt.which === 37) || (evt.which === 39)) {
-              obj.$dots.find('.slick-active button').focus();
-            }
-          });
-        }
-      }
-
-      function beforeChange(event, slick, currentSlide, nextSlide) {
-        var $slider = slick.$slider;
-        var $currentSlide = $slider.find('.' + classes.currentSlide);
-        var $nextSlide = $slider.find('.slideshow__slide[data-slick-index="' + nextSlide + '"]');
-      }
-
-      function getSlideshowId($el) {
-        return '#Slideshow-' + $el.data('id');
-      }
-
-      return slideshow;
-    })();
-	
+  };	
 
 	// **********************************************************************//
 	// ! Window ready
@@ -186,6 +112,16 @@ var ResponsiveMenu =  {
             $(this).parent().next().slideToggle();
         });
 
+        //banner
+        $('.banner-home').slick({
+          dots: false,
+          arrows: false,
+          slideToShow:1,
+          autoplay:true,
+          autoplayspeed:3000,
+          fade: true
+        });
+
 	// **********************************************************************//
 	// ! Window load
 	// **********************************************************************//
@@ -199,4 +135,4 @@ var ResponsiveMenu =  {
 	$(window).on('resize', function () {
 	  
 	});
-  })(jQuery);
+})(jQuery)});

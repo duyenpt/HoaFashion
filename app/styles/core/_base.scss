@@ -62,6 +62,11 @@ a{
 .btn{
   background-color:$clr-black;
   @include border-radius(0);
+  color: $clr-white;
+  &:hover, &:focus {
+    background-color: #222;
+    text-decoration: none;
+  }
 }
 .btn--small {
     padding: 6px 10px 8px;
