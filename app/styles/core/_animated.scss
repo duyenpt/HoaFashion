@@ -45,3 +45,30 @@
     transform: none;
   }
 }
+
+//showStickyMenu
+@-webkit-keyframes showStickyMenu {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@-moz-keyframes showStickyMenu {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes showStickyMenu {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0;
+  }
+}

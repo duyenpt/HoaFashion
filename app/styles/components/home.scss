@@ -1,0 +1,30 @@
+//.store-info
+.store-info{
+	.row{
+		.col-md-3{
+			&+.col-md-3{
+				@include breakpoint(md){
+					border-left: 1px dotted #ddd;
+				}
+			}
+		}
+	}
+}
+
+.tile-store-info{
+	text-align:center;
+	.fa{
+    font-size: 40px;
+    vertical-align: middle;
+    display: block;
+    margin-bottom: 20px;
+    color:#a9a9a9;
+	}
+	h5{
+		margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 13px;
+    font-weight: 600;
+	}
+}

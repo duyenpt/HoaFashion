@@ -1,7 +1,15 @@
 extends layouts/default
 
 block content
-	.container
-		.row
-			.col-lg-6 left
-			.col-lg-6 right
+	section.banner-home(style="height:1000px;")
+	section.store-info.index-section
+		.container-fluid
+			.row
+				.col-md-3
+					+tile_store_info('Free Shipping & Return', 'Free shipping on all US orders')(class="fa fa-rocket")
+				.col-md-3
+					+tile_store_info('Money Guarantee', '30 days money back guarantee')(class="fa fa-usd")
+				.col-md-3
+					+tile_store_info('Online Support', 'We support online 24/24 on day')(class="fa fa-headphones")
+				.col-md-3
+					+tile_store_info('Secure Payments', 'All payment are Secured and trusted.')(class="fa fa-money")
