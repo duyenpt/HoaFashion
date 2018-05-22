@@ -1,7 +1,8 @@
 mixin subMenuPage
   ul.sub-menu.style-2
     li
-      a(href="#") About Us <i class="fa fa-angle-right" aria-hidden="true"></i>
+      a(href="#") About Us <i class="fa fa-angle-right d-none d-lg-inline-block" aria-hidden="true"></i>
+        i.fa.fa-plus.d-lg-none(aria-hidden='true')
       ul.sub-menu
         li
           a(href="02_001_About_1.html") About Us 01
@@ -14,40 +15,17 @@ mixin subMenuPage
         li
           a(href="02_005_About_5.html") About Us 05
     li
-      a(href="#") About Us with Sidebar  <i class="fa fa-angle-right" aria-hidden="true"></i>
-      ul.sub-menu
-        li
-          a(href="02_006_About_Sidebar_1_Company_Overview.html") Company Overview
-        li
-          a(href="02_006_About_Sidebar_2_Our_Mission.html") Our Mission
-        li
-          a(href="02_006_About_Sidebar_3_Company_History.html") Company History
-        li
-          a(href="02_006_About_Sidebar_4_Partners.html") Partners
-        li
-          a(href="02_006_About_Sidebar_5_Our_Team.html") Our Team
-        li
-          a(href="02_006_About_Sidebar_6_Careers.html") Carrers
+      a(href="#") About Us with Sidebar
     li
-      a(href="#") Services  <i class="fa fa-angle-right" aria-hidden="true"></i>
+      a(href="#") Services  <i class="fa fa-angle-right d-none d-lg-inline-block" aria-hidden="true"></i>
+        i.fa.fa-plus.d-lg-none(aria-hidden='true')
       ul.sub-menu
         li
           a(href="05_001_Services_1.html") Services 01
         li
           a(href="05_002_Services_2.html") Services 02
     li
-      a(href="08_001_Shop_Items.html") Contact Shop  <i class="fa fa-angle-right" aria-hidden="true"></i>
-      ul.sub-menu
-        li
-          a(href="07_001_Contact_1.html") Contact 01
-        li
-          a(href="07_002_Contact_2.html") Contact 02
-        li
-          a(href="07_003_Contact_3.html") Contact 03
-        li
-          a(href="07_004_Contact_4.html") Contact 04
-        li
-          a(href="07_005_Contact_5.html") Contact 05
+      a(href="08_001_Shop_Items.html") Contact Shop
     li
       a(href="08_001_Shop_Items.html") Shop
 
@@ -56,9 +34,8 @@ mixin submenuClothing
     li
       .row
         .col-lg-3
-          h3
-            a(href="#") Women
-              span.visually-hidden expand
+          a.site-nav(href="#") Women
+            i.fa.fa-plus.d-lg-none(aria-hidden='true')
           ul.subLinks
             li.lvl-2
               a.site-nav.lvl-2(href='/collections/women') Blazers & Vests
@@ -71,9 +48,8 @@ mixin submenuClothing
             li.lvl-2
               a.site-nav.lvl-2(href='/collections/women') Pants
         .col-lg-3
-          h3
-            a(href="#") Men
-              span.visually-hidden expand
+          a.site-nav(href="#") Men
+            i.fa.fa-plus.d-lg-none(aria-hidden='true')
           ul.subLinks
             li.lvl-2
               a.site-nav.lvl-2(href='/collections/women') Blazers & Vests
@@ -86,9 +62,8 @@ mixin submenuClothing
             li.lvl-2
               a.site-nav.lvl-2(href='/collections/women') Pants
         .col-lg-3
-          h3
-            a(href="#") Kids
-              span.visually-hidden expand
+          a.site-nav(href="#") Kids
+            i.fa.fa-plus.d-lg-none(aria-hidden='true')
           ul.subLinks
             li.lvl-2
               a.site-nav.lvl-2(href='/collections/women') Blazers & Vests
@@ -101,9 +76,8 @@ mixin submenuClothing
             li.lvl-2
               a.site-nav.lvl-2(href='/collections/women') Pants
         .col-lg-3
-          h3
-            a(href="#") Sportswear
-              span.visually-hidden expand
+          a.site-nav(href="#") Sportswear
+            i.fa.fa-plus.d-lg-none(aria-hidden='true')
           ul.subLinks
             li.lvl-2
               a.site-nav.lvl-2(href='/collections/women') Blazers & Vests
@@ -132,9 +106,8 @@ mixin submenuJewelry
     li
       .row
         .col-lg-3
-          h3
-            a(href="#") Imitation Jewellery
-              span.visually-hidden expand
+          a.site-nav(href="#") Imitation Jewellery
+            i.fa.fa-plus.d-lg-none(aria-hidden='true')
           ul.subLinks
             li.lvl-2
               a.site-nav.lvl-2(href='/') Necklaces & Pendants
@@ -147,9 +120,8 @@ mixin submenuJewelry
             li.lvl-2
               a.site-nav.lvl-2(href='/') Jewellery Sets
         .col-lg-3
-          h3
-            a(href="#") Men
-              span.visually-hidden Precious Jewellery
+          a.site-nav(href="#") Men
+            i.fa.fa-plus.d-lg-none(aria-hidden='true')
           ul.subLinks
             li.lvl-2
               a.site-nav.lvl-2(href='/collections/women') Blazers & Vests
@@ -162,9 +134,8 @@ mixin submenuJewelry
             li.lvl-2
               a.site-nav.lvl-2(href='/collections/women') Pants
         .col-lg-3
-          h3
-            a(href="#") Dimond Jewellery
-              span.visually-hidden expand
+          a.site-nav(href="#") Dimond Jewellery
+            i.fa.fa-plus.d-lg-none(aria-hidden='true')
           ul.subLinks
             li.lvl-2
               a.site-nav.lvl-2(href='/collections/women') Blazers & Vests
@@ -185,9 +156,8 @@ mixin submenuAccesories
     li
       .row
         .col-lg-3
-          h3
-            a(href="#") Women
-              span.visually-hidden expand
+          a.site-nav(href="#") Women
+            i.fa.fa-plus.d-lg-none(aria-hidden='true')
           ul.subLinks
             li.lvl-2
               a.site-nav.lvl-2(href='/collections/women') Blazers & Vests
@@ -200,9 +170,8 @@ mixin submenuAccesories
             li.lvl-2
               a.site-nav.lvl-2(href='/collections/women') Pants
         .col-lg-3
-          h3
-            a(href="#") Men
-              span.visually-hidden expand
+          a.site-nav(href="#") Men
+            i.fa.fa-plus.d-lg-none(aria-hidden='true')
           ul.subLinks
             li.lvl-2
               a.site-nav.lvl-2(href='/collections/women') Blazers & Vests
@@ -215,9 +184,8 @@ mixin submenuAccesories
             li.lvl-2
               a.site-nav.lvl-2(href='/collections/women') Pants
         .col-lg-3
-          h3
-            a(href="#") Kids
-              span.visually-hidden expand
+          a.site-nav(href="#") Kids
+            i.fa.fa-plus.d-lg-none(aria-hidden='true')
           ul.subLinks
             li.lvl-2
               a.site-nav.lvl-2(href='/collections/women') Blazers & Vests
@@ -230,9 +198,8 @@ mixin submenuAccesories
             li.lvl-2
               a.site-nav.lvl-2(href='/collections/women') Pants
         .col-lg-3
-          h3
-            a(href="#") Sportswear
-              span.visually-hidden expand
+          a.site-nav(href="#") Sportswear
+            i.fa.fa-plus.d-lg-none(aria-hidden='true')
           ul.subLinks
             li.lvl-2
               a.site-nav.lvl-2(href='/collections/women') Blazers & Vests

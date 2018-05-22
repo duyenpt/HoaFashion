@@ -69,7 +69,7 @@ var ResponsiveMenu =  {
     },function(event) {
       $('.mega-wrap').fadeOut('300');
     });
-  }
+  };
 
   //banner
   var theme = theme || {};
@@ -165,7 +165,6 @@ var ResponsiveMenu =  {
             $('.header-search').removeClass('open');
         });
         $('.search-open').click(function(){
-            console.log('123');
             $('.header-search').addClass('open');
         });
 
@@ -186,6 +185,15 @@ var ResponsiveMenu =  {
             $(this).parent().next().slideToggle();
         });
 
+        $('.navbar-toggler').click(function(e){
+          e.stopPropagation();
+          $('body').addClass('open-menu');
+        });
+
+        $('.closemobileMenu').click(function(){
+          $('body').removeClass('open-menu');
+        });
+  });
 	// **********************************************************************//
 	// ! Window load
 	// **********************************************************************//
@@ -199,4 +207,4 @@ var ResponsiveMenu =  {
 	$(window).on('resize', function () {
 	  
 	});
-  })(jQuery);
+})(jQuery);

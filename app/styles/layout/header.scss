@@ -1,6 +1,7 @@
 header{
   background-color:$clr-white;
 }
+
 .mainnav {
   @include transition(all .3s ease-out);
   ul {
@@ -287,13 +288,15 @@ header{
     border: 0;
 }
 .mainnav .sub-menu{
-  h3{
-    text-transform: uppercase;
-    color: $clr-black;
-    font-weight: 600;
-    font-size:13px;
-    a{
-      color:$clr-black;
+  div{
+    &>.site-nav{
+      text-transform: uppercase;
+      color: $clr-black;
+      font-weight: 600;
+      font-size:13px;
+      display:block;
+      font-family:$title-font;
+      margin-bottom:10px;
     }
   }
   .subLinks{
@@ -443,7 +446,7 @@ header{
       overflow-x:hidden;
       overflow-y:auto;
       &.show{
-        left: 0;
+        // left: 0;
         opacity: 1;
         visibility: visible;
       }
@@ -472,6 +475,10 @@ header{
       }
     }
   }
+}
+
+#mainnav .sub-menu .subLinks{
+  display:block !important;
 }
 
 .mini-products-list{
@@ -507,7 +514,6 @@ header{
 
 
 //.header-search
-
 .header-search{
   position:fixed;
   top:-100px;
@@ -564,3 +570,73 @@ header{
     z-index:98;
   }
 }
+
+// menu mobile
+#mainnav-mobi{
+  li{
+    border-top: 1px solid #eeeeee;
+    position: relative;
+    a{
+      color: #333333;
+      font-size: 13px;
+      text-decoration: none;
+      display: block;
+      padding: 10px 45px 10px 10px;
+      opacity: 1;
+      -webkit-font-smoothing: antialiased;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-family:$base-font;
+      margin-bottom:0;
+    }
+    li{
+      a{
+        padding-left:20px;
+      }
+      li{
+        a{
+          padding-left: 30px;
+        }
+      }
+    }
+
+    ul{
+      display: none;
+      background-color: #f2f2f2;
+    }
+  }
+}
+
+.closemobileMenu{
+  color: $clr-black;
+  font-size: 13px;
+  padding: 8px 10px;
+  background-color: #eee;
+  cursor: pointer;
+  i{
+    font-size: 18px;
+    float:right;
+    margin-left:5px;
+  }
+}
+#wrapper{
+  @include transition(all 0.4s ease-in-out);
+}
+.open-menu{
+  @media screen and (max-width:991px){
+    overflow-x:hidden;
+  }
+  #wrapper{
+    @media screen and (max-width:991px){
+      @include translate(270px,0);
+    }
+  }
+  .navbar{
+    .navbar-collapse{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
