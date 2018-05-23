@@ -240,16 +240,6 @@ var ResponsiveMenu =  {
           });
           // End Slider
  
-
-        //banner
-        $('.banner-home').slick({
-          dots: false,
-          arrows: false,
-          slideToShow:1,
-          autoplay:true,
-          autoplayspeed:3000,
-          fade: true
-        });
      });
 	// **********************************************************************//
 	// ! Window load
