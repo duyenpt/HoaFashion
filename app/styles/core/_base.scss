@@ -97,3 +97,45 @@ svg.icon {
     vertical-align: middle;
     fill: currentColor;
 }
+
+//custom slider
+.slick-prev, .slick-next {
+    position: absolute;
+    z-index: 9;
+    display: block;
+    height: 20px;
+    width: 20px;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    padding: 0;
+    border: none;
+    &:before{
+      font-family: "FontAwesome";
+      font-size: 25px;
+      line-height: 1;
+      color: #000;
+      opacity: 0.75;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+.slick-prev {
+    left: -25px;
+    &:before{
+      content: "\f104";
+    }
+}
+.slick-next {
+    right: -25px;
+    &:before{
+      content: "\f105";
+    }
+}

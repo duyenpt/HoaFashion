@@ -258,3 +258,186 @@ mixin cartDropdown
       li.buttonSet.text-center(rv-show='cart.item_count | gt 0')
         a#inlinecheckout-cart.btn.btn-secondary.btn--small(href='/cart') view Cart
         a.btn.btn-secondary.btn--small(href='/checkout') Check out
+
+
+mixin itemProducts
+  // item
+  .item
+    .tile-prpoduct
+      .view-img.lazy
+        a.img-link(href="#")
+          img.lazyloaded.primary(src="img/upload/products/img-1.jpg" alt="Image")
+          img.lazyloaded.hover(src="img/upload/products/img-1-hover.jpg" alt="Image")
+          img.lazyloaded.hover.variantImg(src="" alt="Image")
+        .product-labels
+          label.on-sale Sale
+        form.variants.add
+          button.btn.btn--secondary.btn-addto-cart(type='button') Select Options
+        .button-set
+          a.quick-view(href='#', title='Quick View', tabindex='0')
+            i.fa.fa-search(aria-hidden='true')
+          .wishlist-btn
+            a.wishlist.added-wishlist(href='#', rel='camelia-reversible-jacket-black-red', title='Already in your wishlist, Go to wishlist', tabindex='0')
+              i.fa.fa-heart
+              span View Wishlist
+      h4
+        a(href="#") Camelia Reversible Jacket in Black/Red
+      .price
+        span.old-price $600.00
+        span.new-price $500.00
+      .rating
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star-half-o
+      ul.swatches
+        li.swatch.red(title='Red', style='background-color: red;', rel='img/upload/products/img-1-cl-1.jpg')
+        li.swatch.blue(title='Blue', style='background-color: blue;', rel='img/upload/products/img-1-cl-2.jpg')
+        li.swatch.green(title='Green', style='background-color: green;', rel='img/upload/products/img-1-cl-3.jpg')
+        li.swatch.gray(title='Gray', style='background-color: gray;', rel='img/upload/products/img-1-cl-4.jpg')
+        li.swatch.aqua(title='aqua', style='background-color: aqua;', rel='img/upload/products/img-1-cl-5.jpg')
+        li.swatch.orange(title='Orange', style='background-color: orange;', rel='img/upload/products/img-1-cl-6.jpg')
+        li.swatch.black(title='Black', style='background-color: black;', rel='img/upload/products/img-1-cl-7.jpg')
+  // e: item
+  // item
+  .item
+    .tile-prpoduct
+      .view-img.lazy
+        a.img-link(href="#")
+          img.lazyloaded.primary(src="img/upload/products/img-2.jpg" alt="Image")
+          img.lazyloaded.hover(src="img/upload/products/img-2-hover.jpg" alt="Image")
+          img.lazyloaded.hover.variantImg(src="" alt="Image")
+        .product-labels
+          label.on-sale Sale
+        form.variants.add
+          button.btn.btn--secondary.btn-addto-cart(type='button') Select Options
+        .button-set
+          a.quick-view(href='#', title='Quick View', tabindex='0')
+            i.fa.fa-search(aria-hidden='true')
+          .wishlist-btn
+            a.wishlist.added-wishlist(href='#', rel='camelia-reversible-jacket-black-red', title='Already in your wishlist, Go to wishlist', tabindex='0')
+              i.fa.fa-heart
+              span View Wishlist
+      h4
+        a(href="#") Camelia Reversible Jacket in Black/Red
+      .price
+        span.old-price $600.00
+        span.new-price $500.00
+      .rating
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star-half-o
+      ul.swatches
+        li.swatch.red(title='Red', style='background-color: red;', rel='img/upload/products/img-2-cl-1.jpg')
+        li.swatch.blue(title='Blue', style='background-color: blue;', rel='img/upload/products/img-2-cl-2.jpg')
+        li.swatch.green(title='Green', style='background-color: green;', rel='img/upload/products/img-2-cl-3.jpg')
+  // e: item
+  // item
+  .item
+    .tile-prpoduct
+      .view-img.lazy
+        a.img-link(href="#")
+          img.lazyloaded.primary(src="img/upload/products/img-3.jpg" alt="Image")
+          img.lazyloaded.hover(src="img/upload/products/img-3-hover.jpg" alt="Image")
+          img.lazyloaded.hover.variantImg(src="" alt="Image")
+        .product-labels
+          label.on-sale Sale
+        form.variants.add
+          button.btn.btn--secondary.btn-addto-cart(type='button') Select Options
+        .button-set
+          a.quick-view(href='#', title='Quick View', tabindex='0')
+            i.fa.fa-search(aria-hidden='true')
+          .wishlist-btn
+            a.wishlist.added-wishlist(href='#', rel='camelia-reversible-jacket-black-red', title='Already in your wishlist, Go to wishlist', tabindex='0')
+              i.fa.fa-heart
+              span View Wishlist
+      h4
+        a(href="#") Camelia Reversible Jacket in Black/Red
+      .price
+        span.old-price $600.00
+        span.new-price $500.00
+      .rating
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star-half-o
+      ul.swatches
+        li.swatch.red(title='Red', style='background-color: red;', rel='img/upload/products/img-3-cl-1.jpg')
+        li.swatch.blue(title='Blue', style='background-color: blue;', rel='img/upload/products/img-3-cl-2.jpg')
+        li.swatch.green(title='Green', style='background-color: green;', rel='img/upload/products/img-3-cl-3.jpg')
+  // e: item
+  // item
+  .item
+    .tile-prpoduct
+      .view-img.lazy
+        a.img-link(href="#")
+          img.lazyloaded.primary(src="img/upload/products/img-4.jpg" alt="Image")
+          img.lazyloaded.hover(src="img/upload/products/img-4-hover.jpg" alt="Image")
+          img.lazyloaded.hover.variantImg(src="" alt="Image")
+        .product-labels
+          label.on-sale Sale
+        form.variants.add
+          button.btn.btn--secondary.btn-addto-cart(type='button') Select Options
+        .button-set
+          a.quick-view(href='#', title='Quick View', tabindex='0')
+            i.fa.fa-search(aria-hidden='true')
+          .wishlist-btn
+            a.wishlist.added-wishlist(href='#', rel='camelia-reversible-jacket-black-red', title='Already in your wishlist, Go to wishlist', tabindex='0')
+              i.fa.fa-heart
+              span View Wishlist
+      h4
+        a(href="#") Camelia Reversible Jacket in Black/Red
+      .price
+        span.old-price $600.00
+        span.new-price $500.00
+      .rating
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star-half-o
+      ul.swatches
+        li.swatch.red(title='Red', style='background-color: red;', rel='img/upload/products/img-4-cl-1.jpg')
+        li.swatch.blue(title='Blue', style='background-color: blue;', rel='img/upload/products/img-4-cl-2.jpg')
+        li.swatch.green(title='Green', style='background-color: green;', rel='img/upload/products/img-4-cl-3.jpg')
+  // e: item
+  // item
+  .item
+    .tile-prpoduct
+      .view-img.lazy
+        a.img-link(href="#")
+          img.lazyloaded.primary(src="img/upload/products/img-5.jpg" alt="Image")
+          img.lazyloaded.hover(src="img/upload/products/img-5-hover.jpg" alt="Image")
+          img.lazyloaded.hover.variantImg(src="" alt="Image")
+        .product-labels
+          label.on-sale Sale
+        form.variants.add
+          button.btn.btn--secondary.btn-addto-cart(type='button') Select Options
+        .button-set
+          a.quick-view(href='#', title='Quick View', tabindex='0')
+            i.fa.fa-search(aria-hidden='true')
+          .wishlist-btn
+            a.wishlist.added-wishlist(href='#', rel='camelia-reversible-jacket-black-red', title='Already in your wishlist, Go to wishlist', tabindex='0')
+              i.fa.fa-heart
+              span View Wishlist
+      h4
+        a(href="#") Camelia Reversible Jacket in Black/Red
+      .price
+        span.old-price $600.00
+        span.new-price $500.00
+      .rating
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star-half-o
+      ul.swatches
+        li.swatch.red(title='Red', style='background-color: red;', rel='img/upload/products/img-5-cl-1.jpg')
+        li.swatch.blue(title='Blue', style='background-color: blue;', rel='img/upload/products/img-5-cl-2.jpg')
+        li.swatch.green(title='Green', style='background-color: green;', rel='img/upload/products/img-5-cl-3.jpg')
+        li.swatch.pink(title='Green', style='background-color: pink;', rel='img/upload/products/img-5-cl-4.jpg')
+  // e: item

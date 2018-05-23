@@ -32,30 +32,100 @@
 //.tile-prpoduct
 .tile-prpoduct{
 	display:inline-block;
-	.view-img{
-		position: relative;
-    overflow: hidden;
-    margin: 0 auto 15px;
-    .img-link{
-    	display: block;
-    	white-space: nowrap;
-    	img{
-    		width: 100%;
-    		margin: 0 auto;
-    		@include transition(all ease-out 0.5s);
-    		display:block;
-    	}
-    }
+	text-align:center;
+	h4{
+		font-size: 14px;
+    letter-spacing: 0.02em;
+    line-height: 20px;
+	}
+}
+.swatches {
+  margin-top: 8px;
+  @extend %list-type;
+  li{
+  	border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    display: inline-block;
+    height: 11px !important;
+    width: 11px !important;
+    margin: 0 1px;
+    background-size: cover;
+    cursor: pointer;
+  }
+}
 
-    &:hover{
-    	.variants.add {
-		    bottom: 5px;
-			}
-			.button-set{
-				top: 5px;
-    		opacity: 1;
-			}
-    }
+.rating{
+	color:$clr-5;
+	i{
+		margin: 0 2px;
+	}
+	a{
+		color:$clr-5;
+	}
+}
+
+.price{
+	font-size:13px;
+	font-weight:400;
+	.old-price{
+		text-decoration:line-through;
+		margin-right:5px;
+	}
+	.new-price{
+		color:#e95144;
+	}
+}
+.view-img{
+	position: relative;
+  overflow: hidden;
+  margin: 0 auto 15px;
+  .img-link{
+  	display: block;
+  	white-space: nowrap;
+  	img{
+  		width: 100%;
+  		margin: 0 auto;
+  		@include transition(all ease-out 0.5s);
+  		display:block;
+  	}
+  }
+  .hover{
+  	visibility: hidden;
+    opacity: 0;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover{
+  	.variants.add {
+	    bottom: 5px;
+		}
+		.button-set{
+			top: 5px;
+  		opacity: 1;
+		}
+		.primary{
+			opacity: 0;
+		}
+		.hover:not(.variantImg){
+			opacity: 1;
+    	visibility: visible;
+		}
+  }
+}
+
+.showVariantImg{
+	img {
+	    opacity: 0;
+	}
+	.variantImg {
+	    visibility: visible;
+	    opacity: 1;
 	}
 }
 
@@ -142,3 +212,17 @@ a.wishlist {
 	}
 }
 
+
+
+//.slider-products
+.slider-products{
+	.slick-arrow {
+	    margin-top: -60px;
+	}
+	.slick-list {
+	  margin-left: -30px;
+	  .slick-slide{
+	  	padding-left:30px;
+	  }
+	}
+}

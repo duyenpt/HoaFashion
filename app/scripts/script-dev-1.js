@@ -144,22 +144,7 @@ var ResponsiveMenu =  {
       return slideshow;
     })();
 
-    function hover_img(){
-        $('.lazy').each(function(){
-            var img_hover = $(this).find('img').attr('data-src');
-            var img_normal = $(this).find('img').attr('src');
-            console.log(img_hover);
-            $(this).hover(function(){
-                $(this).find('img').attr('src', img_hover);
-            }, function(){
-                $(this).find('img').attr('src', img_normal);
-            });
-
-        });
-    }
-
-  
-
+    
 
 
 
@@ -213,7 +198,47 @@ var ResponsiveMenu =  {
           $('body').removeClass('open-menu');
         });
 
-        hover_img();
+        $('.swatches li').hover(function(){
+          var srcImg = $(this).attr('rel');
+          console.log(srcImg);
+           $(this).parents('.tile-prpoduct').find('.variantImg').attr('src',srcImg);
+          $(this).parents('.tile-prpoduct').find('.img-link').addClass('showVariantImg')
+        }, function(){
+          $(this).parents('.tile-prpoduct').find('.img-link').removeClass('showVariantImg')
+        });
+
+
+        $('.slider-products').slick({
+            dots: false,
+            infinite: true,
+            slidesToShow:5,
+            slidesToScroll: 1,
+            autoplay: false,
+            responsive: [
+              {
+                breakpoint: 1200,
+                settings: {
+                  slidesToShow: 4,
+                  slidesToScroll: 1,
+                }
+              },
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                }
+              },        
+              {
+                breakpoint: 750,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+          });
+          // End Slider
  
 
         //banner
