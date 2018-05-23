@@ -238,6 +238,7 @@ var ResponsiveMenu =  {
               }
             ]
           });
+          $('.slider-products').resize();
           // End Slider
  
 

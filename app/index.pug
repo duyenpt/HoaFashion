@@ -2,11 +2,6 @@ extends layouts/default
 
 block content
 	section.banner-home(style="height:300px;")
-	section.new-products.index-section
-		.container-fluid
-			.slider-products
-				+itemProducts
-				+itemProducts
 	section.store-info.index-section
 		.container-fluid
 			.row
@@ -18,3 +13,65 @@ block content
 					+tile_store_info('Online Support', 'We support online 24/24 on day')(class="fa fa-headphones")
 				.col-md-3
 					+tile_store_info('Secure Payments', 'All payment are Secured and trusted.')(class="fa fa-money")
+	// new-products
+	section.new-products.index-section
+		.container-fluid
+			h2.title-block.text-center Sản phẩm mới
+			.slider-products
+				+itemProducts
+				+itemProducts
+	// e: new-products
+
+	// specail-products
+	section.specail-products.index-section
+		.container-fluid
+			h2.title-block.text-center Sản phẩm nổi bật
+			.slider-products
+				+itemProducts
+				+itemProducts
+	// e: specail-products
+	// products
+	section.products.index-section
+		.container-fluid
+			nav
+				#nav-tab.nav.justify-content-center(role='tablist')
+					a#nav-women-tab.nav-item.nav-link.active(data-toggle='tab', href='#nav-women', role='tab', aria-controls='nav-women', aria-selected='true') Women
+					a#nav-man-tab.nav-item.nav-link(data-toggle='tab', href='#nav-man', role='tab', aria-controls='nav-man', aria-selected='false') Man
+					a#nav-sale-tab.nav-item.nav-link(data-toggle='tab', href='#nav-sale', role='tab', aria-controls='nav-sale', aria-selected='false') Sale
+			#nav-tabContent.tab-content
+				#nav-women.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-women-tab')
+					.slider-products
+						+itemProducts
+						+itemProducts
+				#nav-man.tab-pane.fade(role='tabpanel', aria-labelledby='nav-man-tab')
+					.slider-products
+						+itemProducts
+						+itemProducts
+				#nav-sale.tab-pane.fade(role='tabpanel', aria-labelledby='nav-sale-tab')
+					.slider-products
+						+itemProducts
+						+itemProducts
+	// e: products
+	// newsletter-social
+	section.newsletter-social
+		.container-fluid
+			.row.align-items-center
+				.col-lg-8.col-md-7
+					.newsletter.d-flex
+						.section-header.h2 <span>sign up for </span>newsletter
+						.form
+							input(tyle="emmail" placeholder="Email address")
+							button.btn Subscribe
+				.col-lg-4.col-md-4.text-md-right
+					ul.social
+						li
+							a(href="#")
+								i.fa.fa-facebook-square
+						li
+							a(href="#")
+								i.fa.fa-youtube-square
+						li
+							a(href="#")
+								i.fa.fa-instagram
+	// e: newsletter-social
+	
