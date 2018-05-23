@@ -1,7 +1,41 @@
 extends layouts/default
 
 block content
-	section.banner-home(style="height:300px;")
+	// start banner-home
+	section.banner-home
+		.slideshow
+			.banner-item.item(style="background-image: url(http://cdn.shopify.com/s/files/1/1964/8879/files/home-bnr-4_1900x.jpg)")
+				a(href="#")
+					//- img.pc(src="http://cdn.shopify.com/s/files/1/1964/8879/files/home-bnr-4_1900x.jpg", alt="Image")
+					//- img.sp(src="http://cdn.shopify.com/s/files/1/1964/8879/files/home-bnr-4_800x.jpg", alt="Image")
+					.slideshow-overlay
+						.slideshow-content
+							.slideshow-caption
+								h2.slideshow-title Fashion &amp; Show
+								span.slideshow-subtitle A World Fashion and Trendy Fashion Clother&#39;s
+								span.btn Shop now
+
+			.banner-item.item(style="background-image: url(http://cdn.shopify.com/s/files/1/1964/8879/files/slide-2_1900x.jpg)")
+				a(href="#")
+					//- img.pc(src="http://cdn.shopify.com/s/files/1/1964/8879/files/slide-2_1900x.jpg", alt="Image")
+					//- img.sp(src="http://cdn.shopify.com/s/files/1/1964/8879/files/slide-2_800x.jpg", alt="Image")
+					.slideshow-overlay
+						.slideshow-content
+							.slideshow-caption
+								h2.slideshow-title Shop Our New Collection
+								span.slideshow-subtitle From Hight to low, classic or modern. We have you covered
+								span.btn Shop now
+			.banner-item.item(style="background-image: url(http://cdn.shopify.com/s/files/1/1964/8879/files/slide-3_1900x.jpg)")
+				a(href="#")
+					//- img.pc(src="http://cdn.shopify.com/s/files/1/1964/8879/files/slide-3_1900x.jpg", alt="Image")
+					//- img.sp(src="http://cdn.shopify.com/s/files/1/1964/8879/files/slide-3_800x.jpg", alt="Image")
+					.slideshow-overlay
+						.slideshow-content
+							.slideshow-caption
+								h2.slideshow-title Lingerie collections
+								span.slideshow-subtitle Save up to 50% off this weekend only
+								span.btn Shop now
+	// e: banner-home
 	section.store-info.index-section.wow.fadeInUp
 		.container-fluid
 			.row
@@ -52,6 +86,70 @@ block content
 						+itemProducts
 						+itemProducts
 	// e: products
+
+	// start latest-blog
+	.index-section.wow.fadeInUp
+		.container-fluid.latest-blog
+			h2.title-block.text-center Latest From Our Blog
+			.row.row-blog
+				.col-lg-6
+					article.wrap-blog
+						a.blog-image(href="#")
+							img.img-fluid(src="https://cdn.shopify.com/s/files/1/1964/8879/articles/slide-1_300x300_crop_center.jpg?v=1493734555", alt="Image")
+						.blog-meta
+							.blog-inner
+								h2.article-title
+									a(href="#") It's all about how you wear
+								span.article-author by Adorn Themes
+								span.article-date
+									time May 02, 2017
+								.article-desc.dotdotdot On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la
+								ul.article-meta-buttons.list-inline
+									li
+										a(href="#") Read more
+				.col-lg-6
+					article.wrap-blog
+						a.blog-image(href="#")
+							img.img-fluid(src="https://cdn.shopify.com/s/files/1/1964/8879/articles/fashion_1024x1024_36e42d4b-6955-4691-a937-7a376c46d7c8_300x300_crop_center.jpg?v=1493734525", alt="Image")
+						.blog-meta
+							.blog-inner
+								h2.article-title
+									a(href="#") 27 Days of Spring Fashion Recap
+								span.article-author by Adorn Themes
+								span.article-date
+									time May 02, 2017
+								.article-desc.dotdotdot On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la
+								ul.article-meta-buttons.list-inline
+									li
+										a(href="#") Read more
+	// e: latest-blog
+
+	// start partner
+	.index-section.section-partner.wow.fadeInUp
+		.container-fluid
+			.partner
+				.item.partner-item
+					img(src="https://cdn.shopify.com/s/files/1/1964/8879/files/brandlogo6_160x160@2x.png?v=1493715404", alt="Image")
+				.item.partner-item
+					img(src="https://cdn.shopify.com/s/files/1/1964/8879/files/brandlogo1_aa9b7c8b-e2e5-40bc-b79e-c7c56f7bd380_160x160@2x.png?v=1494846575", alt="Image")
+				.item.partner-item
+					img(src="https://cdn.shopify.com/s/files/1/1964/8879/files/brandlogo3_919bfb1b-2169-481a-a65a-f4b227880170_160x160@2x.png?v=1494846155", alt="Image")
+				.item.partner-item
+					img(src="https://cdn.shopify.com/s/files/1/1964/8879/files/brandlogo1_4ff188fa-e478-4392-b85c-467aa1f47554_160x160@2x.png?v=1494846165", alt="Image")
+				.item.partner-item
+					img(src="https://cdn.shopify.com/s/files/1/1964/8879/files/brandlogo2_0e9d0192-a4ac-4e2a-998a-8307fb9d6458_160x160@2x.png?v=1494846169", alt="Image")
+				.item.partner-item
+					img(src="https://cdn.shopify.com/s/files/1/1964/8879/files/brandlogo6_160x160@2x.png?v=1493715404", alt="Image")
+				.item.partner-item
+					img(src="https://cdn.shopify.com/s/files/1/1964/8879/files/brandlogo1_aa9b7c8b-e2e5-40bc-b79e-c7c56f7bd380_160x160@2x.png?v=1494846575", alt="Image")
+				.item.partner-item
+					img(src="https://cdn.shopify.com/s/files/1/1964/8879/files/brandlogo3_919bfb1b-2169-481a-a65a-f4b227880170_160x160@2x.png?v=1494846155", alt="Image")
+				.item.partner-item
+					img(src="https://cdn.shopify.com/s/files/1/1964/8879/files/brandlogo1_4ff188fa-e478-4392-b85c-467aa1f47554_160x160@2x.png?v=1494846165", alt="Image")
+				.item.partner-item
+					img(src="https://cdn.shopify.com/s/files/1/1964/8879/files/brandlogo2_0e9d0192-a4ac-4e2a-998a-8307fb9d6458_160x160@2x.png?v=1494846169", alt="Image")
+	// e: partner
+
 	// newsletter-social
 	section.newsletter-social.wow.fadeInUp
 		.container-fluid
