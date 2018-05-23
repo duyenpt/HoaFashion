@@ -2,7 +2,7 @@ extends layouts/default
 
 block content
 	section.banner-home(style="height:300px;")
-	section.store-info.index-section
+	section.store-info.index-section.wow.fadeInUp
 		.container-fluid
 			.row
 				.col-md-3
@@ -16,7 +16,7 @@ block content
 	// new-products
 	section.new-products.index-section
 		.container-fluid
-			h2.title-block.text-center Sản phẩm mới
+			h2.title-block.text-center.wow.fadeInUp Sản phẩm mới
 			.slider-products
 				+itemProducts
 				+itemProducts
@@ -25,20 +25,20 @@ block content
 	// specail-products
 	section.specail-products.index-section
 		.container-fluid
-			h2.title-block.text-center Sản phẩm nổi bật
-			.slider-products
+			h2.title-block.text-center.wow.fadeInUp Sản phẩm nổi bật
+			.slider-products.wow.fadeInUp
 				+itemProducts
 				+itemProducts
 	// e: specail-products
 	// products
 	section.products.index-section
 		.container-fluid
-			nav
+			nav.wow.fadeInUp
 				#nav-tab.nav.justify-content-center(role='tablist')
 					a#nav-women-tab.nav-item.nav-link.active(data-toggle='tab', href='#nav-women', role='tab', aria-controls='nav-women', aria-selected='true') Women
 					a#nav-man-tab.nav-item.nav-link(data-toggle='tab', href='#nav-man', role='tab', aria-controls='nav-man', aria-selected='false') Man
 					a#nav-sale-tab.nav-item.nav-link(data-toggle='tab', href='#nav-sale', role='tab', aria-controls='nav-sale', aria-selected='false') Sale
-			#nav-tabContent.tab-content
+			#nav-tabContent.tab-content.wow.fadeInUp
 				#nav-women.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-women-tab')
 					.slider-products
 						+itemProducts
@@ -53,16 +53,16 @@ block content
 						+itemProducts
 	// e: products
 	// newsletter-social
-	section.newsletter-social
+	section.newsletter-social.wow.fadeInUp
 		.container-fluid
 			.row.align-items-center
-				.col-lg-8.col-md-7
-					.newsletter.d-flex
+				.col-lg-8.mb-3.mb-lg-0
+					.newsletter.d-flex.flex-wrap
 						.section-header.h2 <span>sign up for </span>newsletter
 						.form
 							input(tyle="emmail" placeholder="Email address")
 							button.btn Subscribe
-				.col-lg-4.col-md-4.text-md-right
+				.col-lg-4.text-center.text-lg-right
 					ul.social
 						li
 							a(href="#")

@@ -147,7 +147,6 @@ var ResponsiveMenu =  {
     
 
 
-
 	// **********************************************************************//
 	// ! Window ready
 	// **********************************************************************//
@@ -157,6 +156,12 @@ var ResponsiveMenu =  {
           ResponsiveMenu.menuWidthDetect($(this).width());
         });
         setupMegaMenu();
+
+        new WOW().init();
+
+        if($(window).width() < 767) {
+            $('.wow').removeClass('wow');   
+        }
 
         $(".footer-links h3").click(function() {
             if($(window).width() < 750){
@@ -241,7 +246,6 @@ var ResponsiveMenu =  {
           $('.slider-products').resize();
           // End Slider
  
-
         //banner
         $('.banner-home').slick({
           dots: false,
@@ -263,7 +267,9 @@ var ResponsiveMenu =  {
 	// ! Window resize
 	// **********************************************************************//
 	$(window).on('resize', function () {
-	  
+	  if($(window).width() < 767) {
+        $('.wow').removeClass('wow');   
+    }
 	});
 
 })(jQuery);
