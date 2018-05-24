@@ -91,9 +91,9 @@ var ResponsiveMenu =  {
             $('.wow').removeClass('wow');   
         }
 
-        $(".footer-links h3").click(function() {
+        $('.footer-links h3').click(function() {
             if($(window).width() < 750){
-              $(this).toggleClass("active");
+              $(this).toggleClass('active');
               $(this).next().slideToggle();
           	}    
         }); 
